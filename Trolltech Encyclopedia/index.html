@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="./lib/swiper-3.4.2.min.css">
+    <title>hello-vue</title>
+    <style type="text/css">
+		*{
+			margin: 0;padding: 0;
+		}
+    #app{
+      overflow: hidden;
+    }
+    /* 通过webkit内核隐藏了滚动条 */
+    ::-webkit-scrollbar{
+      width: 0;height: 0;
+    }
+    /* 通过定义css 去控制 路由切换页面的样式 */
+    .slide-enter-active, .slide-leave-active {
+      transition: 0.5s ease 0s;
+      transform: translateX(-500px);
+      opacity: 0;
+    }
+    .slide-enter, .slide-leave-to{
+      transition: 0.5s ease 0s;
+      transform: translateX(500px);
+    }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <app></app>
+    </div>
+    <script type="text/javascript" src="./lib/jquery.min.js"></script>
+    <script src="/dist/build.js"></script>
+  </body>
+</html>
